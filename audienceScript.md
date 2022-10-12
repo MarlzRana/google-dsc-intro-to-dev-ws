@@ -16,35 +16,17 @@
 - Now **restart the shell**
 - Set **Linux as your default profile** and save changes
 
-## Any questions?
-
 ## Unix Commands
 
-**Motivation**
-
-- **Go back to PowerPoint**
-- Now that we are all on a Unix-based operating system I am going to introduce you to a couple of basic Unix commands
-- These commands help will help you navigate around in the Unix file system
-- **Go through each command one by one**:
-  - <code>pwd</code>: See your current working path
-  - <code>ls</code>: See files and directories within the current directory (introduce the idea of flags such as <code>-a</code> to tell <code>ls</code> you want to list all files including hidden files and directory's)
-  - <code>cd</code>: change directory
-  - <code>mkdir</code>: make directory
-  - <code>rmdir</code>: remove director
-  - <code>touch</code>: new file
-  - <code>sudo</code>: admin mode
-
-## Any questions?
+- <code>pwd</code>: See your current working path
+- <code>ls</code>: See files and directories within the current directory (introduce the idea of flags such as <code>-a</code> to tell <code>ls</code> you want to list all files including hidden files and directory's)
+- <code>cd</code>: change directory
+- <code>mkdir</code>: make directory
+- <code>rmdir</code>: remove director
+- <code>touch</code>: new file
+- <code>sudo</code>: admin mode
 
 ## Install a custom Unix package manager
-
-### Motivation
-
-- In Unix-based operating systems **all pieces of software are essentially "packages"** which is all the code and data an application would need bundled up
-- Unix provides us with a default package manager to manage packages however **there are superior package managers that exist**
-- We will be using **HomeBrew** as an alternative package manager as it makes the process of installing and uninstalling packages a lot more clear-cut and easier in comparison to the default package manager
-
-### Technical
 
 - Run the command <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
 - Enter your password
@@ -53,21 +35,7 @@
 - **It should recommend you some commands to run, run them in a separate terminal window**
 - Here you should be able to see how many steps of installation Homebrew is taking care of, making the installation of packages more of a one-command process
 
-## Any questions?
-
 ## Switch bash to zsh
-
-### Motivation
-
-- Typically most distributions use a bash shell which is the thing that you use to interact with your computer via commands (i.e this thing in the terminal)
-- We are going to be switching our shell from bash to zshell as zshell offers us a greater level of customization
-- Mac users typically do not have to switch from zsh to bash as that is now the default shell for Mac users on the latest version of macOS
-- The way you can check this is by typing into the command line:
-  - <code>which zsh</code>
-  - The following line of code should return a file path and if you don't see one you don't have zsh configured on your mac
-  - Speak to Billy if you have this issue and he will come around with the quick fix
-
-## Technical
 
 - Run the command <code>sudo apt-get install zsh</code>
 
@@ -77,29 +45,15 @@
 
 ## Oh-my-zsh
 
-### Motivation
-
-- Now you won't be able to see zshell yet but we are now going to add oh-my-zsh which is a zshell manager, I know a lot of managers!
-- This will help us manage our zshell instance and introduces a whole new array of cool themes and plugins so let's get it installed!
-
-### Technical
-
 - Run <code>sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code>
 
-#### Windows Only
+  #### Windows Only:
 
-- Then type <code>y</code> to set zsh as your default terminal
-- Then confirm the action with your password
-- Now zshell should be configured with oh-my-zsh managing it
-
-## Any questions?
+  - Then type <code>y</code> to set zsh as your default terminal
+  - Then confirm the action with your password
+  - Now zshell should be configured with oh-my-zsh managing it
 
 ## VSCode
-
-### Motivation
-
-- VSCode is one of the most popular text editors, meaning that it helps you only write code unlike an integrated IDE which helps you both write code and do code management tasks
-- Most people like to use a VSCode instead of an IDE as IDEs are typically made for a specific language whereas a text editor like VSCode supports multiple languages in a single text editor (making it more suitable for projects with multiple languages) and is generally more lightweight making it snappier and faster
 
 ### Technical
 
@@ -118,19 +72,7 @@
   - Type shell command
   - Click on install code command in path
 
-## Any questions?
-
 ## Nerd Font
-
-### Motivation
-
-- Next, we going to install a NerdFont
-- We are now getting to real customization of the terminal to get it ready for future power use
-- I have attached a NerdFont that I like, note that there are a set of them and you can choose any like from <a href="nerdfonts.com">nerdfonts.com</a>
-- The reason we have to install a NerdFont in specific and not just some general font, is that so we can get access to glyphs which are icons provided by the font
-- These glyphs are going to be used by the next thing we are going to install which is powerlevel10k to display us useful stats within our terminal as we use it hence increasing the terminal's utility
-
-### Technical
 
 - Join our Discord server
 - Install the font I have attached
@@ -149,21 +91,10 @@
   - Change the font to CaskaydiaCoveNF
   - Then close all windows
 
-## Any questions?
-
 ## PowerLevel10K
 
-### Motivation
-
-- The terminal so far just lists the directory we are in currently
-- What if we could get the terminal to tell us useful information as we navigate through directories?
-- Such as the language a project within a directory is coded in or the number of unstaged changes or the current branch name (which we will learn more about once we come to learning Git)?
-- That's where PowerLevel10k or p10k comes into play, and provides us useful contextual information when within a directory and allows for further terminal customization
-
-### Technical
-
 - Run the command <code>git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k</code>
-- Run the command <code>code ~/.zshrc</code> (Mention that the tilda is shorthand for the home directory)
+- Run the command <code>code ~/.zshrc</code>
 - Set <code>ZSH_THEME="powerlevel10k/powerlevel10k"</code> in ./zshrc
 - Run <code>exec zsh</code> to restart the shell
 - Then the p10k wizard should launch on your next instance of launching the terminal
@@ -174,14 +105,6 @@
 - Then make sure to select verbose where appropriate
 
 ## Zsh Plugins
-
-### Motivation
-
-- There are further ways we can make our terminal even more useful and that is through
-  - Terminal command syntax highlighting (which helps highlight what valid commands are)
-  - Command auto-completion (which is as it sounds helps automatically complete commands for you based on command history)
-
-### Technical
 
 - Run <code>cd ~/.oh-my-zsh/plugins</code>
 - Run <code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</code>
@@ -195,13 +118,6 @@
   - Restart terminal
 
 ## Asdf
-
-### Motivation
-
-- Installing new programming languages on your machine can be difficult and especially managing multiple versions of them
-- asdf is a global language version and allows us to install any programming language (provided someone has a plugin for it) and manage multiple versions easily at the touch of a single command
-
-### Technical
 
 - Run <code>brew install asdf</code>
 - Per language, we need to install a language plugin which essentially manages that programming language
